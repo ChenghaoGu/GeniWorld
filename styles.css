@@ -5,9 +5,9 @@
   --border: rgba(17, 17, 17, 0.12);
   --link: #111111;
   --caption: #333333;
-  --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --sans: "Source Sans 3", "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
   --content: 56rem;
   --media: 56rem;
 }
@@ -71,7 +71,9 @@ a:hover {
 .brand {
   font-family: var(--serif);
   font-size: 1.75rem;
+  font-optical-sizing: auto;
   line-height: 1.2;
+  letter-spacing: -0.02em;
   text-decoration: none;
   color: var(--fg);
 }
@@ -100,8 +102,9 @@ a:hover {
   font-family: var(--serif);
   font-size: clamp(2.25rem, 5vw, 3.5rem);
   font-weight: 400;
+  font-optical-sizing: auto;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
