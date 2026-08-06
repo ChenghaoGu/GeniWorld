@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GeniWorld: A Generalizable Interactive World Model for Robotic Manipulation via Visual Actions</title>
+    <meta
+      name="description"
+      content="GeniWorld is an interactive world model for robots that generalizes robustly across unseen scenarios via visual action representations."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a class="brand" href="#">GeniWorld</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#abstract">Abstract</a>
+          <a href="#figures">Figures</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h1>
+          GeniWorld: A Generalizable Interactive World Model for Robotic
+          Manipulation via Visual Actions
+        </h1>
+        <dl class="meta">
+          <dt>Paper</dt>
+          <dd>Coming soon</dd>
+        </dl>
+      </section>
+
+      <figure class="figure figure--hero" id="figure-1">
+        <div class="figure-frame">
+          <picture>
+            <source srcset="assets/figures/figure1.webp" type="image/webp" />
+            <img
+              src="assets/figures/figure1.png"
+              alt="Overview of GeniWorld: an autoregressive robotic world model with visual action representations"
+              loading="eager"
+            />
+          </picture>
+        </div>
+        <figcaption class="figure-caption">
+          <div class="figure-label">Figure 1</div>
+          <span class="caption-title">Overview of GeniWorld.</span>
+          GeniWorld is an autoregressive robotic world model that transforms
+          action inputs into visual action representations, enabling closed-loop
+          interaction with human operators and robot policies. Trained on limited
+          scene-specific demonstrations, GeniWorld generalizes to
+          out-of-distribution (OOD) scenarios to produce high-fidelity
+          observation predictions. Furthermore, it synthesizes rich manipulation
+          trajectories to boost downstream policy performance and robustness
+          under diverse conditions.
+        </figcaption>
+      </figure>
+
+      <section class="abstract" id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          Generalist robot policies exhibit strong capabilities, but their
+          robustness in complex and unseen environments remains limited. Scaling
+          robot learning and evaluation in diverse real-world environments
+          remains costly and challenging. Action-conditioned world models offer
+          a promising alternative, but they often suffer from limited action
+          controllability and poor generalization to out-of-distribution (OOD)
+          scenarios. To this end, we present
+          <span class="model-name">GeniWorld</span>, an interactive world model
+          for robots that generalizes robustly across unseen scenarios. Building
+          on pretrained video generative models, we use URDF-based rendering to
+          transform numerical actions into visual action representations,
+          enabling spatially grounded action control. By explicitly decoupling
+          embodiment kinematics from environmental dynamics, our model mitigates
+          scene overfitting and facilitates modeling of robot-environment
+          interactions. To achieve closed-loop control, we construct an
+          autoregressive video prediction model integrated with high-frequency
+          robot kinematic control, enabling interaction with both robot policies
+          and human teleoperators. In our experiments, even when trained solely
+          on limited fixed-scene data, our model achieves superior in-domain
+          performance and robust zero-shot generalization to highly randomized,
+          unseen environments. For downstream applications, GeniWorld serves as
+          a scalable policy evaluator that remains reliable under environmental
+          perturbations. Furthermore, even with limited real-world
+          demonstrations, GeniWorld generates diverse manipulation trajectories
+          within the world model, improving downstream policy performance and
+          robustness in complex environments.
+        </p>
+      </section>
+
+      <div id="figures">
+        <section class="section">
+          <h2 class="section-heading">Method</h2>
+          <figure class="figure" id="figure-2">
+            <div class="figure-frame">
+              <picture>
+                <source srcset="assets/figures/figure2.webp" type="image/webp" />
+                <img
+                  src="assets/figures/figure2.png"
+                  alt="Overview of the GeniWorld method with URDF rendering and causal DiT"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <figcaption class="figure-caption">
+              <div class="figure-label">Figure 2</div>
+              <span class="caption-title">Overview of the GeniWorld method.</span>
+              We convert robot actions into visual motions via URDF rendering.
+              These motions are subsequently encoded into latent representations
+              and concatenated with noisy video latents. The combined
+              representation serves as input to a causal DiT that predicts future
+              videos via flow matching. During inference, the initial scene image
+              is provided as the first frame. Actions are passed through the
+              URDF-based renderer to produce motion conditions, and the model
+              predicts future observations while leveraging KV caching to
+              maintain historical context.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="section">
+          <h2 class="section-heading">Results</h2>
+          <figure class="figure" id="figure-3">
+            <div class="figure-frame">
+              <picture>
+                <source srcset="assets/figures/figure3.webp" type="image/webp" />
+                <img
+                  src="assets/figures/figure3.png"
+                  alt="Qualitative Clean-to-Random world-modeling results comparing GeniWorld with baselines"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <figcaption class="figure-caption">
+              <div class="figure-label">Figure 3</div>
+              <span class="caption-title"
+                >Qualitative Clean-to-Random world-modeling results.</span
+              >
+              All models are trained on clean tabletop data and evaluated in
+              unseen scenes. GeniWorld preserves the commanded robot motion and
+              produces interaction outcomes that closely match the ground truth,
+              whereas competing methods fail to generate the expected results in
+              out-of-distribution (OOD) scenarios. Furthermore, the ablation
+              results show that our dense visual actions enable more accurate
+              interaction modeling.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="section">
+          <h2 class="section-heading">Policy Improvement</h2>
+          <figure class="figure" id="figure-9">
+            <div class="figure-frame">
+              <picture>
+                <source srcset="assets/figures/figure9.webp" type="image/webp" />
+                <img
+                  src="assets/figures/figure9.png"
+                  alt="Real-world policy success rates across different GeniWorld data augmentation settings"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <figcaption class="figure-caption">
+              <div class="figure-label">Figure 9</div>
+              <span class="caption-title"
+                >Real-world policy success rates across different settings.</span
+              >
+              <strong>Real</strong> denotes policies trained strictly on
+              real-world data;
+              <strong>Real + Spatial-Gen</strong> adds GeniWorld-synthesized
+              data focused on spatial generalization; and
+              <strong>Real + Spatial-Gen + Diverse-Gen</strong> adds both
+              spatially randomized data and data with diverse scene variations.
+              The combined regime achieves the strongest overall performance.
+            </figcaption>
+          </figure>
+        </section>
+      </div>
+
+      <footer class="footer">
+        GeniWorld project page · Inspired by the presentation style of
+        Physical Intelligence research posts.
+      </footer>
+    </div>
+  </body>
+</html>
