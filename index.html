@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -19,7 +19,6 @@
   <body>
     <div class="page">
       <header class="site-header">
-        <a class="brand" href="#">GeniWorld</a>
         <nav class="nav" aria-label="Primary">
           <a href="#abstract">Abstract</a>
           <a href="#figures">Figures</a>
@@ -33,6 +32,12 @@
         </h1>
         <dl class="meta">
           <dt>Paper</dt>
+          <dd>
+            <a href="https://arxiv.org/pdf/2608.06332" target="_blank" rel="noopener noreferrer"
+              >arXiv:2608.06332</a
+            >
+          </dd>
+          <dt>Code</dt>
           <dd>Coming soon</dd>
         </dl>
       </section>
@@ -49,7 +54,6 @@
           </picture>
         </div>
         <figcaption class="figure-caption">
-          <div class="figure-label">Figure 1</div>
           <span class="caption-title">Overview of GeniWorld.</span>
           GeniWorld is an autoregressive robotic world model that transforms
           action inputs into visual action representations, enabling closed-loop
@@ -59,6 +63,23 @@
           observation predictions. Furthermore, it synthesizes rich manipulation
           trajectories to boost downstream policy performance and robustness
           under diverse conditions.
+        </figcaption>
+      </figure>
+
+      <figure class="figure figure--follow" id="demo-videos">
+        <div class="figure-frame">
+          <img
+            src="assets/Demo_Videos.gif?v=3"
+            alt="GeniWorld demo videos"
+            loading="eager"
+          />
+        </div>
+        <figcaption class="figure-caption">
+          We propose a generalizable interactive world model conditioned on
+          embodied visual actions that enables closed-loop interaction with
+          policies and human operators. Even with limited demonstrations, our
+          model generalizes robustly across diverse scenarios and enables the
+          generation of novel behaviors.
         </figcaption>
       </figure>
 
@@ -109,7 +130,6 @@
               </picture>
             </div>
             <figcaption class="figure-caption">
-              <div class="figure-label">Figure 2</div>
               <span class="caption-title">Overview of the GeniWorld method.</span>
               We convert robot actions into visual motions via URDF rendering.
               These motions are subsequently encoded into latent representations
@@ -138,7 +158,6 @@
               </picture>
             </div>
             <figcaption class="figure-caption">
-              <div class="figure-label">Figure 3</div>
               <span class="caption-title"
                 >Qualitative Clean-to-Random world-modeling results.</span
               >
@@ -167,7 +186,6 @@
               </picture>
             </div>
             <figcaption class="figure-caption">
-              <div class="figure-label">Figure 9</div>
               <span class="caption-title"
                 >Real-world policy success rates across different settings.</span
               >
