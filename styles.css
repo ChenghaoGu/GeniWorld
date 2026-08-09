@@ -5,9 +5,9 @@
   --border: rgba(17, 17, 17, 0.12);
   --link: #111111;
   --caption: #333333;
-  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --sans: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Source Sans 3", "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
   --content: 56rem;
   --media: 56rem;
 }
@@ -63,24 +63,9 @@ a:hover {
   margin: 0 auto 3.5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 1rem;
-}
-
-.brand {
-  font-family: var(--serif);
-  font-size: 1.75rem;
-  font-optical-sizing: auto;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-  color: var(--fg);
-}
-
-.brand:hover {
-  color: var(--fg);
-  text-decoration: none;
 }
 
 .nav {
@@ -102,9 +87,8 @@ a:hover {
   font-family: var(--serif);
   font-size: clamp(2.25rem, 5vw, 3.5rem);
   font-weight: 400;
-  font-optical-sizing: auto;
   line-height: 1.15;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   text-wrap: balance;
 }
 
@@ -142,7 +126,12 @@ a:hover {
 }
 
 .figure--hero {
-  margin-bottom: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.figure--follow {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
 }
 
 .figure-frame {
