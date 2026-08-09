@@ -14,7 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="stylesheet" href="styles.css?v=20260810g" />
   </head>
   <body>
     <div class="page">
@@ -69,7 +70,7 @@
       <figure class="figure figure--follow" id="demo-videos">
         <div class="figure-frame">
           <img
-            src="assets/Demo_Videos.gif?v=3"
+            src="assets/Demo_Videos.gif?v=20260810a"
             alt="GeniWorld demo videos"
             loading="eager"
           />
@@ -174,6 +175,128 @@
 
         <section class="section">
           <h2 class="section-heading">Policy Improvement</h2>
+
+          <div class="video-compare" id="data-gen-videos">
+            <div class="video-group">
+              <h3 class="video-group-title">Move Bowl</h3>
+              <div class="video-grid">
+                <div class="video-cell">
+                  <span class="video-label video-label--raw">Only Real-World Data</span>
+                  <span class="video-result video-result--fail">Fail</span>
+                  <img src="assets/data_gen/bowl/raw_distractor.gif?v=full5s30" alt="Only Real-World Data · Distractor" loading="lazy" />
+                  <span class="video-condition">Distractor</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--ours">Add GeniWorld-Synthesis Data</span>
+                  <span class="video-result video-result--success">Success</span>
+                  <img src="assets/data_gen/bowl/ours_distractor.gif?v=full5s30" alt="Add GeniWorld-Synthesis Data · Distractor" loading="lazy" />
+                  <span class="video-condition">Distractor</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--raw">Only Real-World Data</span>
+                  <span class="video-result video-result--fail">Fail</span>
+                  <img src="assets/data_gen/bowl/raw_novel_instance.gif?v=full5s30" alt="Only Real-World Data · Novel Instance" loading="lazy" />
+                  <span class="video-condition">Novel Instance</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--ours">Add GeniWorld-Synthesis Data</span>
+                  <span class="video-result video-result--success">Success</span>
+                  <img src="assets/data_gen/bowl/ours_novel_instance.gif?v=full5s30" alt="Add GeniWorld-Synthesis Data · Novel Instance" loading="lazy" />
+                  <span class="video-condition">Novel Instance</span>
+                                </div>
+              </div>
+            </div>
+
+            <div class="video-group">
+              <h3 class="video-group-title">Place Mug</h3>
+              <div class="video-grid">
+                <div class="video-cell">
+                  <span class="video-label video-label--raw">Only Real-World Data</span>
+                  <span class="video-result video-result--fail">Fail</span>
+                  <img src="assets/data_gen/cups/raw_distractor.gif?v=full5s30" alt="Only Real-World Data · Distractor" loading="lazy" />
+                  <span class="video-condition">Distractor</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--ours">Add GeniWorld-Synthesis Data</span>
+                  <span class="video-result video-result--success">Success</span>
+                  <img src="assets/data_gen/cups/ours_distractor.gif?v=full5s30" alt="Add GeniWorld-Synthesis Data · Distractor" loading="lazy" />
+                  <span class="video-condition">Distractor</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--raw">Only Real-World Data</span>
+                  <span class="video-result video-result--fail">Fail</span>
+                  <img src="assets/data_gen/cups/raw_novel_instance.gif?v=full5s30" alt="Only Real-World Data · Novel Instance" loading="lazy" />
+                  <span class="video-condition">Novel Instance</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--ours">Add GeniWorld-Synthesis Data</span>
+                  <span class="video-result video-result--success">Success</span>
+                  <img src="assets/data_gen/cups/ours_novel_instance.gif?v=full5s30" alt="Add GeniWorld-Synthesis Data · Novel Instance" loading="lazy" />
+                  <span class="video-condition">Novel Instance</span>
+                                </div>
+              </div>
+            </div>
+
+            <div class="video-group">
+              <h3 class="video-group-title">Open Drawer</h3>
+              <div class="video-grid">
+                <div class="video-cell">
+                  <span class="video-label video-label--raw">Only Real-World Data</span>
+                  <span class="video-result video-result--fail">Fail</span>
+                  <img src="assets/data_gen/drawer/raw_ood1.gif?v=full5s30" alt="Only Real-World Data · OOD 1" loading="lazy" />
+                  <span class="video-condition">OOD 1</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--ours">Add GeniWorld-Synthesis Data</span>
+                  <span class="video-result video-result--success">Success</span>
+                  <img src="assets/data_gen/drawer/ours_ood1.gif?v=full5s30" alt="Add GeniWorld-Synthesis Data · OOD 1" loading="lazy" />
+                  <span class="video-condition">OOD 1</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--raw">Only Real-World Data</span>
+                  <span class="video-result video-result--fail">Fail</span>
+                  <img src="assets/data_gen/drawer/raw_ood2.gif?v=full5s30" alt="Only Real-World Data · OOD 2" loading="lazy" />
+                  <span class="video-condition">OOD 2</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--ours">Add GeniWorld-Synthesis Data</span>
+                  <span class="video-result video-result--success">Success</span>
+                  <img src="assets/data_gen/drawer/ours_ood2.gif?v=full5s30" alt="Add GeniWorld-Synthesis Data · OOD 2" loading="lazy" />
+                  <span class="video-condition">OOD 2</span>
+                                </div>
+              </div>
+            </div>
+
+            <div class="video-group">
+              <h3 class="video-group-title">Fold Towel</h3>
+              <div class="video-grid">
+                <div class="video-cell">
+                  <span class="video-label video-label--raw">Only Real-World Data</span>
+                  <span class="video-result video-result--fail">Fail</span>
+                  <img src="assets/data_gen/towel/raw_lightning.gif?v=full5s30" alt="Only Real-World Data · Lighting" loading="lazy" />
+                  <span class="video-condition">Lighting</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--ours">Add GeniWorld-Synthesis Data</span>
+                  <span class="video-result video-result--success">Success</span>
+                  <img src="assets/data_gen/towel/ours_lighting.gif?v=full5s30" alt="Add GeniWorld-Synthesis Data · Lighting" loading="lazy" />
+                  <span class="video-condition">Lighting</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--raw">Only Real-World Data</span>
+                  <span class="video-result video-result--fail">Fail</span>
+                  <img src="assets/data_gen/towel/raw_novel_instance.gif?v=full5s30" alt="Only Real-World Data · Novel Instance" loading="lazy" />
+                  <span class="video-condition">Novel Instance</span>
+                                </div>
+                <div class="video-cell">
+                  <span class="video-label video-label--ours">Add GeniWorld-Synthesis Data</span>
+                  <span class="video-result video-result--success">Success</span>
+                  <img src="assets/data_gen/towel/ours_novel_instance.gif?v=full5s30" alt="Add GeniWorld-Synthesis Data · Novel Instance" loading="lazy" />
+                  <span class="video-condition">Novel Instance</span>
+                                </div>
+              </div>
+            </div>
+          </div>
           <figure class="figure" id="figure-9">
             <div class="figure-frame">
               <picture>
@@ -198,8 +321,19 @@
               The combined regime achieves the strongest overall performance.
             </figcaption>
           </figure>
+
         </section>
       </div>
+
+      <section class="citation" id="citation">
+        <h2 class="section-heading">Citation</h2>
+        <pre class="citation-bibtex"><code>@article{gu2026geniworld,
+  title={GeniWorld: A Generalizable Interactive World Model for Robotic Manipulation via Visual Actions},
+  author={Gu, Chenghao and Yu, Hanyang and Zhang, Jingbo and Lin, Haitao and Zhang, Wenyao and Wang, Jinghe and Jin, Hanglei and Xie, Shuzhao and Jiang, Jingyan and Wang, Zhi},
+  journal={arXiv preprint arXiv:2608.06332},
+  year={2026}
+}</code></pre>
+      </section>
 
       <footer class="footer">
         GeniWorld project page · Inspired by the presentation style of
